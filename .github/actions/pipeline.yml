@@ -1,4 +1,4 @@
-ame: MVP pipeline
+name: MVP pipeline
 
 on:
   push:
