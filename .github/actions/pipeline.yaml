@@ -1,0 +1,15 @@
+ame: MVP pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ssh into server 
+        run: |
+          ssh devops@192.168.31.171
+            
