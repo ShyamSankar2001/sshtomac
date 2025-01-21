@@ -21,6 +21,6 @@ jobs:
           
       - name: Connect to macOS
         run: |
-          ssh -o StrictHostKeyChecking=no devops@100.80.47.92 "uname -a && echo 'Connected via VPN! s'"
+          ssh -o StrictHostKeyChecking=no devops@100.80.47.92 "uname -a && echo 'Connected via VPN!'"
 
           
