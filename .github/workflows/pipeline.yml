@@ -9,7 +9,12 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: ssh into server 
+      - name: Install Tailscale
         run: |
-          ssh devops@192.168.31.171
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscale up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
+          
+      - name: Connect to macOS
+        run: |
+          ssh -o StrictHostKeyChecking=no shyamsankarkr@100.119.115.120
             
