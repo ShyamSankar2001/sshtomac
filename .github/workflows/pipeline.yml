@@ -14,10 +14,13 @@ jobs:
           curl -fsSL https://tailscale.com/install.sh | sh
           sudo tailscale up --authkey=${{ secrets.TAILSCALE_AUTHKEY }}
       
-      
+      - name: ssh into server 
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
       - name: Connect to macOS
         run: |
-          ssh -o StrictHostKeyChecking=no shyamsankarkr@100.119.115.120 "uname -a && echo 'Connected via VPN!'"
+          ssh -o StrictHostKeyChecking=no shyamsankarkr@100.119.115.120 "uname -a && echo 'Connected via VPN! s'"
 
           
