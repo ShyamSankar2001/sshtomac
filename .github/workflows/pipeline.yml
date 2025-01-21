@@ -9,6 +9,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      -
+        name: git checkout
+        uses: actions/checkout@v4
       - name: Install Tailscale
         run: |
           curl -fsSL https://tailscale.com/install.sh | sh
