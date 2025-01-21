@@ -24,6 +24,6 @@ jobs:
           
       - name: Connect to macOS
         run: |
-          scp -o StrictHostKeyChecking=no  ./docker-compose.yml devops@100.80.47.92:./ 
+          scp -o StrictHostKeyChecking=no  ./docker-compose.yaml devops@100.80.47.92:./ 
          
           
