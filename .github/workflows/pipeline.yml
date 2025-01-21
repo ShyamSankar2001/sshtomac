@@ -24,7 +24,7 @@ jobs:
           
       - name: Connect to macOS
         run: |
-          ssh -o StrictHostKeyChecking=no devops@100.80.47.92 "uname -a && ls -la"
-          scp -o StrictHostKeyChecking=no  ./docker-compose.yaml devops@100.80.47.92:./ 
-         
+          ssh -o StrictHostKeyChecking=no devops@100.80.47.92 "docker-compose up -d"
+          
+          
           
